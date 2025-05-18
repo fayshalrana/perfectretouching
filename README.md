@@ -1,132 +1,69 @@
-# Reactive Folder Structure Documentation
+# Perfect Retouching Website
 
-This documentation provides an overview of the recommended folder structure for a reactive application. This structure is designed to enhance maintainability, scalability, and organization of your project. The structure is modular, making it easy to locate and manage different aspects of your application.
+A modern, responsive React web application for a professional photo editing and retouching service. The project is designed with a strong focus on UI/UX, modular components, and scalability.
 
-## Table of Contents
+## Project Structure
 
-1. Introduction
-2. Folder Structure
-   - assets
-   - components
-     - screen
-     - shared
-   - lib
-   - services
-   - context
-   - hooks
-   - layouts
-   - pages
-   - redux
-     - app
-     - features
-   - styles
-   - utils
-3. Usage
-4. Contributing
-5. License
-
-## Introduction
-
-Reactive applications benefit from a well-organized folder structure that promotes separation of concerns and ease of maintenance. This structure is based on modular components, with each folder serving a specific purpose. The goal is to enhance collaboration, reduce redundancy, and improve code readability.
-
-## Folder Structure
-
-### assets
-
-The `assets` folder contains static resources such as images, icons, and fonts. This is the place to store media files used in your application.
-
-|-- assets/
-| |-- images/
-| |-- icons/
-| |-- fonts/
-
-### components
-
-The `components` folder houses reusable React components. Organize them based on their functionality or type.
-
-|-- components/
-| |-- screen/
-| |-- shared/
-
-### lib
-
-The `lib` folder is for utility libraries or external modules that are not specific to a particular feature or component.
-
-### services
-
-The `services` folder is dedicated to managing communication with external services or APIs. Each service module within this folder encapsulates the logic related to making requests, handling responses, and managing the communication protocol for a specific external service. This modular approach allows for better organization and maintainability, making it easier to update or extend the interactions with external services independently.
-
-### shared
-
-The `shared` folder contains shared utilities, constants, and functions that can be used across the application.
-
-### context
-
-The `context` folder holds React context providers, facilitating state management at a higher level.
-
-|-- context/
-
-### hooks
-
-The `hooks` folder contains custom React hooks that can be reused throughout the application.
-
-|-- hooks/
-
-### layouts
-
-The `layouts` folder includes layout components that structure the overall page layout.
-
-|-- layouts/
-
-### pages
-
-The `pages` folder contains top-level components that represent different pages in your application.
-
-|-- pages/
-
-### redux
-
-The `redux` folder is dedicated to Redux state management.
-
-|-- redux/
-| |-- app/
-| |-- features/
-
-#### app
-
-The `app` folder within `redux` contains global state management, reducers, and actions.
-
-#### features
-
-The `features` folder within `redux` is where you organize features by grouping related components, actions, and reducers together.
-
-|-- redux/
-| |-- features/
-| |-- api/
-
-### styles
-
-The `styles` folder contains global styles, theme files, or styling utilities.
-
-### utils
-
-The `utils` folder is for general utility functions that don't fit into other categories.
-
-## Usage
-
-To use this folder structure, simply organize your project based on the guidelines provided. Place relevant files and components in their respective folders.
-
-Example usage:
-
-```bash
-git clone https://github.com/your-username/your-reactive-app.git
-cd your-reactive-app
+```
+src/
+  components/
+    screen/
+      Home/
+        Hero.jsx           // Hero section with typing effect and image collage
+        AboutSection.jsx   // About section with features and blurbs
+        PricingSection.jsx // Pricing plans with selector and responsive layout
+        TrustSection.jsx   // Testimonials/slider section
+        ...
+    shared/
+      Navbar/
+      Footer/
+      LanguageSelector/
+      ...
+  assets/
+    images/
+    ...
+  styles/
+    ...
 ```
 
-## Contributing
+- **screen/Home/**: Main homepage sections as modular React components.
+- **shared/**: Reusable UI components (navbar, footer, language selector, etc.).
+- **assets/**: Static images and icons.
+- **styles/**: Global and component-specific styles.
 
-Feel free to contribute by opening issues, providing feedback, or submitting pull requests. Follow the contribution guidelines for more details.
+## Key Features
 
-## License
+- **Responsive UI/UX**: All sections adapt to mobile, tablet, and desktop.
+- **Hero Section**: Animated typing effect, image collage, and feature highlights.
+- **About Section**: Service overview, feature grid, and brand blurbs.
+- **Pricing Section**: Interactive plan selector, feature comparison, and custom price box.
+- **Testimonials (TrustSection)**: Slick slider with 3-cards-per-slide layout, responsive.
+- **Language Selector**: Dropdown with country flags, two-column layout.
+- **Mega Menu**: Services menu with icons and multi-column design.
+- **Sticky Header**: Main navigation remains visible on scroll.
+- **Image Collage**: Responsive, hover-grow effect for images.
+- **Custom Buttons & Icons**: Consistent use of react-icons and styled buttons.
+- **CSS Variables**: Uses CSS custom properties for easy theming.
 
-This project is licensed under the MIT License. Feel free to use, modify, and distribute as per the terms of the license.
+## Working Flow
+
+1. **Landing (Hero) Section**: Users see a dynamic headline, typing effect, and a visually engaging image collage. They can enter their email to get started.
+2. **About Section**: Users learn about the company's services, values, and unique selling points via a feature grid and blurbs.
+3. **Pricing Section**: Users select a pricing plan from a sidebar. The main area updates to show plan details, features, and a prominent price box. The layout is fully responsive.
+4. **Testimonials**: Users view client testimonials in a slider, with 3 cards visible per slide on desktop, adapting to fewer on smaller screens.
+5. **Navigation**: The sticky header and mega menu allow users to explore services and switch languages easily.
+6. **Shared Components**: Footer, language selector, and other shared UI elements provide a consistent experience across the site.
+
+## How to Use
+
+- **Browse**: Scroll through the homepage to view all sections.
+- **Select Plan**: Use the pricing selector to compare plans and see details.
+- **Read Testimonials**: Swipe or click through client reviews.
+- **Change Language**: Use the language selector in the navbar.
+- **Contact/Start**: Use the email form in the Hero section or the Get Started buttons in pricing.
+
+---
+
+**Tech Stack:** React, Tailwind CSS, react-icons, react-slick, flagcdn.com (for flags), and custom CSS.
+
+For development or customization, see the code in the `src/components/screen/Home/` and `src/components/shared/` folders.
