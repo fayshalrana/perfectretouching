@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import logo from '@assets/images/logo-white.webp'
 import officeBg from '@assets/images/world-map.webp'
 import companyLogo1 from '@assets/images/nextbellcompany-01.webp'
@@ -8,7 +8,18 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
+
 const Footer = () => {
+  const [showScroll, setShowScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScroll(window.scrollY >= 500);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <footer className="bg-[#343a40] text-white font-sans">
       <div className="container">
@@ -116,7 +127,18 @@ const Footer = () => {
           </div>
         </div>
         {/* Scroll to top button */}
-        <button className="absolute right-8 top-1/2 -translate-y-1/2 bg-[#393d3f] border-none rounded-full w-10 h-10 text-white text-2xl cursor-pointer shadow-md" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="Scroll to top">↑</button>
+        {showScroll && (
+          <button
+            className="fixed bottom-8 right-8 z-50 bg-[#bbb] border-none rounded-full w-14 h-14 flex items-center justify-center text-white text-3xl cursor-pointer transition-opacity duration-300"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            aria-label="Scroll to top"
+          >
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="12" fill="#bbb" />
+              <path d="M8 14l4-4 4 4" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+        )}
       </div>
     </footer>
   );
