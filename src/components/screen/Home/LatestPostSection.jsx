@@ -20,25 +20,26 @@ const posts = [
 
 const LatestPostSection = () => {
   return (
-    <section className="py-16 bg-white">
-      <div className="container flex flex-col md:flex-row gap-8 items-start">
+    <section className="py-[6rem] bg-white">
+      <div className="container flex flex-col md:flex-row gap-28 items-start">
         {/* Left */}
-        <div className="w-full md:w-1/3 flex flex-col items-start justify-start mb-8 md:mb-0">
-          <h2 className="text-2xl md:text-3xl font-semibold text-[#222] mb-2">Our Latest Post</h2>
-          <p className="text-[#444] text-sm mb-6">Capture, Create, and Enhance: Pro Photography and Editing Advice</p>
-          <button className="bg-[#f5f5f5] hover:bg-[#e9faf7] text-[#222] font-medium px-6 py-2 rounded-md text-base shadow-sm transition-all">
+        <div className="w-full md:w-[330px] flex flex-col items-start justify-start mb-8 md:mb-0">
+          <h2 className="text-[40px] leading-[48px] font-normal text-[#222222] mb-[30px]">Our Latest Post</h2>
+          <p className="text-black text-base leading-[26px] mb-[30px]">Capture, Create, and Enhance: Pro Photography and Editing Advice</p>
+          <button className="bg-[#e8e9e9] text-[#222] font-normal px-6 py-2 hover:bg-[#1abc9c] text-base shadow-lg transition-all">
             View all Posts
           </button>
         </div>
         {/* Right: Posts */}
-        <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 relative">
+          <div className="absolute top-0 left-0 h-full w-full dotted-bg pointer-events-none"></div>
           {posts.map((post, idx) => (
-            <div key={idx} className="flex flex-col">
-              <div className="w-full h-[160px] rounded-md overflow-hidden mb-2 bg-gray-100">
+            <div key={idx} className="flex flex-col mb-10">
+              <div className="w-full h-[160px] rounded-md overflow-hidden mb-6 bg-gray-100">
                 <img src={post.image} alt="post" className="w-full h-full object-cover" />
               </div>
-              <div className="text-xs text-[#888] mb-1">{post.date}</div>
-              <div className="text-[#222] font-medium text-[15px] leading-snug line-clamp-2 hover:underline cursor-pointer">
+              <div className="text-[14px] leading-[21px] text-[#888] mb-4 hover:text-[var(--secondaryClr)]">{post.date}</div>
+              <div className="text-[#222] font-normal text-[18px] leading-[27px] line-clamp-2 hover:text-[var(--primaryClr)] cursor-pointer">
                 {post.title}
               </div>
             </div>

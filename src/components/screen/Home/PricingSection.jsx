@@ -1,5 +1,14 @@
 import React, { useState } from "react";
-
+import { BsMagic } from "react-icons/bs";
+import { VscDebugRestart } from "react-icons/vsc";
+import { BsLayers } from "react-icons/bs";
+import { CiHeart } from "react-icons/ci";
+import { BsWindowStack } from "react-icons/bs";
+import { MdOutlineCloudUpload } from "react-icons/md";
+import { FaRegClock } from "react-icons/fa6";
+import { FaRegImages } from "react-icons/fa6";
+import { BsLayersHalf } from "react-icons/bs";
+import { HiOutlineSupport } from "react-icons/hi";
 const plans = [
   {
     name: "Regular",
@@ -7,17 +16,18 @@ const plans = [
     deliveryColor: "text-[#ff6a3c]",
     price: 0.49,
     features: [
-      "Order Management Dashboard",
-      "Editing As Per Service",
-      "Free Revision (Max. Quantity 2)",
-      "No Minimum Image Cap",
-      "Layer File Included",
-      "Free Focus Stacking",
-      "24 Hours Delivery",
-      "Guaranteed Quality",
-      "No Subscription Fee",
-      "24x7 Live Support"
-    ]
+      { icon: <BsMagic className="text-[#1abc9c] text-lg" />, label: "Order Management Dashboard" },
+      { icon: <CiHeart className="text-[#1abc9c] text-lg" />, label: "Editing As Per Service" },
+      { icon: <VscDebugRestart className="text-[#1abc9c] text-lg" />, label: "Free Revision (Max. Quantity 2)" },
+      { icon: <BsWindowStack className="text-[#1abc9c] text-lg" />, label: "No Minimum Image Cap" },
+      { icon: <BsLayers className="text-[#1abc9c] text-lg" />, label: "Layer File Included" },
+      { icon: <MdOutlineCloudUpload className="text-[#1abc9c] text-lg" />, label: "Free Focus Stacking" },
+      { icon: <FaRegClock className="text-[#1abc9c] text-lg" />, label: "24 Hours Delivery" },
+      { icon: <FaRegImages className="text-[#1abc9c] text-lg" />, label: "Guaranteed Quality" },
+      { icon: <BsLayersHalf className="text-[#1abc9c] text-lg" />, label: "No Subscription Fee" },
+      { icon: <HiOutlineSupport className="text-[#1abc9c] text-lg" />, label: "24x7 Live Support" }
+    ],
+    icon: <BsMagic />
   },
   {
     name: "Express",
@@ -25,17 +35,18 @@ const plans = [
     deliveryColor: "text-[#1abc9c]",
     price: 0.69,
     features: [
-      "Order Management Dashboard",
-      "Editing As Per Service",
-      "Free Revision (Max. Quantity 1)",
-      "No Minimum Image Cap",
-      "Layer File Included",
-      "Free Focus Stacking",
-      "Express Delivery",
-      "Guaranteed Quality",
-      "No Subscription Fee",
-      "24x7 Live Support"
-    ]
+      { icon: <BsMagic className="text-[#1abc9c] text-lg" />, label: "Order Management Dashboard" },
+      { icon: <CiHeart className="text-[#1abc9c] text-lg" />, label: "Editing As Per Service" },
+      { icon: <VscDebugRestart className="text-[#1abc9c] text-lg" />, label: "Free Revision (Max. Quantity 1)" },
+      { icon: <BsWindowStack className="text-[#1abc9c] text-lg" />, label: "No Minimum Image Cap" },
+      { icon: <BsLayers className="text-[#1abc9c] text-lg" />, label: "Layer File Included" },
+      { icon: <MdOutlineCloudUpload className="text-[#1abc9c] text-lg" />, label: "Free Focus Stacking" },
+      { icon: <FaRegClock className="text-[#1abc9c] text-lg" />, label: "Express Delivery" },
+      { icon: <FaRegImages className="text-[#1abc9c] text-lg" />, label: "Guaranteed Quality" },
+      { icon: <BsLayersHalf className="text-[#1abc9c] text-lg" />, label: "No Subscription Fee" },
+      { icon: <HiOutlineSupport className="text-[#1abc9c] text-lg" />, label: "24x7 Live Support" }
+    ],
+    icon: <BsMagic />
   },
   {
     name: "Project",
@@ -43,17 +54,18 @@ const plans = [
     deliveryColor: "text-[#ffb300]",
     price: 0.39,
     features: [
-      "Order Management Dashboard",
-      "Editing As Per Service",
-      "Custom Revision Policy",
-      "No Minimum Image Cap",
-      "Layer File Included",
-      "Project-based Delivery",
-      "Guaranteed Quality",
-      "No Subscription Fee",
-      "Dedicated Manager",
-      "24x7 Live Support"
-    ]
+      { icon: <BsMagic className="text-[#1abc9c] text-lg" />, label: "Order Management Dashboard" },
+      { icon: <CiHeart className="text-[#1abc9c] text-lg" />, label: "Editing As Per Service" },
+      { icon: <VscDebugRestart className="text-[#1abc9c] text-lg" />, label: "Custom Revision Policy" },
+      { icon: <BsWindowStack className="text-[#1abc9c] text-lg" />, label: "No Minimum Image Cap" },
+      { icon: <BsLayers className="text-[#1abc9c] text-lg" />, label: "Layer File Included" },
+      { icon: <MdOutlineCloudUpload className="text-[#1abc9c] text-lg" />, label: "Project-based Delivery" },
+      { icon: <FaRegClock className="text-[#1abc9c] text-lg" />, label: "Guaranteed Quality" },
+      { icon: <FaRegImages className="text-[#1abc9c] text-lg" />, label: "No Subscription Fee" },
+      { icon: <BsLayersHalf className="text-[#1abc9c] text-lg" />, label: "Dedicated Manager" },
+      { icon: <HiOutlineSupport className="text-[#1abc9c] text-lg" />, label: "24x7 Live Support" }
+    ],
+    icon: <BsMagic />
   },
   {
     name: "Enterprise",
@@ -61,17 +73,18 @@ const plans = [
     deliveryColor: "text-[#222]",
     price: 0.29,
     features: [
-      "Order Management Dashboard",
-      "Editing As Per Service",
-      "Unlimited Revision",
-      "No Minimum Image Cap",
-      "Layer File Included",
-      "Enterprise Delivery",
-      "Guaranteed Quality",
-      "No Subscription Fee",
-      "Dedicated Manager",
-      "24x7 Priority Support"
-    ]
+      { icon: <BsMagic className="text-[#1abc9c] text-lg" />, label: "Order Management Dashboard" },
+      { icon: <CiHeart className="text-[#1abc9c] text-lg" />, label: "Editing As Per Service" },
+      { icon: <VscDebugRestart className="text-[#1abc9c] text-lg" />, label: "Unlimited Revision" },
+      { icon: <BsWindowStack className="text-[#1abc9c] text-lg" />, label: "No Minimum Image Cap" },
+      { icon: <BsLayers className="text-[#1abc9c] text-lg" />, label: "Layer File Included" },
+      { icon: <MdOutlineCloudUpload className="text-[#1abc9c] text-lg" />, label: "Enterprise Delivery" },
+      { icon: <FaRegClock className="text-[#1abc9c] text-lg" />, label: "Guaranteed Quality" },
+      { icon: <FaRegImages className="text-[#1abc9c] text-lg" />, label: "No Subscription Fee" },
+      { icon: <BsLayersHalf className="text-[#1abc9c] text-lg" />, label: "Dedicated Manager" },
+      { icon: <HiOutlineSupport className="text-[#1abc9c] text-lg" />, label: "24x7 Priority Support" }
+    ],
+    icon: <BsMagic />
   }
 ];
 
@@ -80,59 +93,68 @@ const PricingSection = () => {
   const plan = plans[selected];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-20 bg-white">
       <div className="container">
         {/* Top */}
         <div className="flex flex-col items-center mb-10">
-          <span className="inline-block bg-[#e9faf7] text-[#1abc9c] px-4 py-1 rounded-full text-sm font-medium mb-4">Pricing</span>
-          <h2 className="text-2xl md:text-3xl font-bold text-[#222] text-center mb-2">
-            Unlock stunning visuals with pricing plans<br />designed for every budget
+          <span className="inline-block border border-[#1abc9c] text-[12px] font-light tracking-normal text-[#1abc9c] px-2 rounded-full mb-4">Pricing</span>
+          <h2 className="text-[28px] md:text-[34px] leading-[38px] md:leading-[51px] font-semibold text-[#212529] tracking-normal mb-2 text-center">
+            Unlock stunning visuals with pricing plans<br className="hidden md:block" />designed for every budget
           </h2>
         </div>
         {/* Pricing Table */}
-        <div className="flex flex-col md:flex-row gap-6 justify-center items-stretch max-w-4xl mx-auto">
+        <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 items-stretch">
           {/* Plan Selector */}
-          <div className="flex flex-col gap-2 w-full md:w-48">
+          <div className="w-full lg:col-span-3 flex flex-row lg:flex-col gap-2 mb-4 lg:mb-0 pr-0 lg:pr-4">
             {plans.map((p, i) => (
               <button
                 key={p.name}
                 onClick={() => setSelected(i)}
-                className={`w-full text-left px-6 py-4 rounded border border-gray-200 font-semibold text-lg transition-all flex items-center gap-2 ${
-                  selected === i
-                    ? "bg-[#1abc9c] text-white shadow-md border-[#1abc9c]" 
-                    : "bg-white text-[#222] hover:bg-[#e9faf7]"
-                }`}
+                className={`w-full text-left p-4 md:p-6 rounded border border-gray-200 font-normal text-[18px] md:text-[22px] leading-[28px] md:leading-[33px] transition-all flex items-center gap-2 ${selected === i
+                  ? "bg-[#1abc9c] text-white shadow-md border-[#1abc9c]"
+                  : "bg-white text-[#222] hover:bg-[#e9faf7]"
+                  }`}
               >
-                <span className={`mr-2 w-3 h-3 rounded-full border-2 ${selected === i ? "border-white bg-white" : "border-[#1abc9c] bg-transparent"}`}></span>
+                <span className={`w-3 h-3 rounded-full border-2 flex items-center justify-center
+                  ${selected === i ? "border-white bg-white" : "border-[#1abc9c] bg-transparent"}`}>
+                  {selected === i && (
+                    <span className="w-[10px] h-[10px] rounded-full bg-blue-500 block"></span>
+                  )}
+                </span>
                 {p.name}
               </button>
             ))}
           </div>
-          {/* Plan Details */}
-          <div className="flex-1 bg-white rounded border border-gray-200 px-8 py-6 flex flex-col justify-between min-w-[320px]">
-            <div>
-              <h3 className={`text-lg font-bold mb-2 ${plan.deliveryColor}`}>{plan.delivery}</h3>
-              <hr className="mb-4" />
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-8 text-[15px] text-[#222]">
-                {plan.features.map((f, idx) => (
-                  <div key={idx} className="flex items-center gap-2">
-                    <svg width="16" height="16" fill="#1abc9c" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="#e9faf7" /><path d="M6.5 8.5l1.5 1.5 3-3" stroke="#1abc9c" strokeWidth="1.5" fill="none"/></svg>
-                    {f}
-                  </div>
-                ))}
+          <div className="w-full lg:col-span-9 flex flex-col md:flex-row gap-6 pl-0 lg:pl-2">
+            {/* Plan Details */}
+            <div className="w-full md:w-2/3 bg-white rounded border border-gray-200 px-4 md:px-8 py-6 flex flex-col justify-between mb-6 md:mb-0">
+              <div>
+                <h3 className={`text-[20px] md:text-[26px] leading-[28px] md:leading-[39px] font-semibold mb-2 ${plan.deliveryColor}`}>{plan.delivery}</h3>
+                <hr className="mb-[24px] md:mb-[32px]" />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 md:gap-x-8 text-[15px] text-[#222]">
+                  {plan.features.map((f, idx) => (
+                    <div key={idx} className="flex items-center gap-2">
+                      {typeof f === "object" && f.icon && <span>{f.icon}</span>}
+                      <span className="text-[14px] leading-[21px] font-normal text-[#212529]">
+                        {typeof f === "object" ? f.label : f}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-          {/* Price Box */}
-          <div className="flex flex-col items-center justify-center bg-[#f8f9fa] border border-gray-200 rounded min-w-[180px] px-8 py-8">
-            <span className="text-xs text-[#888] mb-1">AS LOW AS</span>
-            <div className="flex items-end mb-1">
-              <span className="text-3xl font-bold text-[#222]">${plan.price.toFixed(2)}</span>
-              <span className="text-[#ff6a3c] font-bold ml-1 mb-1">IMAGE</span>
+            {/* Price Box */}
+            <div className="w-full md:w-1/3 flex flex-col items-center justify-center bg-[#f8f9fa] border border-gray-200 rounded min-w-[180px] px-6 md:px-8 py-8">
+              <span className="text-[16px] tracking-[0.15em] text-[#7b8a99] font-normal mb-3 uppercase">AS LOW AS</span>
+              <div className="flex items-end mb-2 relative">
+                <span className="text-[24px] md:text-[32px] font-normal text-[#222] align-super mr-1 absolute top-0 -left-6" style={{ lineHeight: '1' }}>$</span>
+                <span className="text-[40px] md:text-[64px] font-noraml text-[#222] leading-[40px] md:leading-[64px]">{plan.price.toFixed(2)}</span>
+              </div>
+              <span className="text-[12px] md:text-[14px] font-bold text-[#ff3c3c] uppercase mb-6 tracking-wider">IMAGE</span>
+              <button className="mt-2 bg-[#1abc9c] hover:bg-[#159c82] text-white font-medium px-6 md:px-8 py-3 rounded-md text-base md:text-lg transition-all w-full">
+                Get Started
+              </button>
             </div>
-            <button className="mt-4 bg-[#1abc9c] hover:bg-[#159c82] text-white font-medium px-6 py-2 rounded-md text-base transition-all w-full">
-              Get Started
-            </button>
           </div>
         </div>
       </div>

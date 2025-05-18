@@ -1,46 +1,88 @@
 import React from "react";
+import Slider from "react-slick";
+import logo1 from "@assets/images/burdeens.webp";
+import logo2 from "@assets/images/doriane.webp";
+import logo3 from "@assets/images/pmp.webp";
+import logo4 from "@assets/images/henri-daussi.webp";
+import logo5 from "@assets/images/segent4.webp";
+import logo6 from "@assets/images/giorpura.webp";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const clients = [
   {
     name: "agent7",
-    img: "https://via.placeholder.com/100x32?text=agent7",
-    alt: "agent7 logo"
+    img: logo1,
+    alt: "agent7 logo",
   },
   {
     name: "DORIANE",
-    img: "https://via.placeholder.com/100x32?text=DORIANE",
-    alt: "DORIANE logo"
+    img: logo2,
+    alt: "DORIANE logo",
   },
   {
     name: "PMP",
-    img: "https://via.placeholder.com/60x32?text=PMP",
-    alt: "PMP logo"
+    img: logo3,
+    alt: "PMP logo",
   },
   {
     name: "HENRI DAUSSI",
-    img: "https://via.placeholder.com/120x32?text=HENRI+DAUSSI",
-    alt: "HENRI DAUSSI logo"
-  }
+    img: logo4,
+    alt: "HENRI DAUSSI logo",
+  },
+  {
+    name: "KATE SPADE",
+    img: logo5,
+    alt: "KATE SPADE logo",
+  },
+  {
+    name: "GIORPURA",
+    img: logo6,
+    alt: "GIORPURA logo",
+  },
 ];
 
 const ClientSection = () => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 1000, // slow, smooth scroll
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    // autoplaySpeed: 0,
+    // cssEase: "linear",
+    // pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 4,
+        }
+      }
+    ]
+  };
+
   return (
-    <section className="py-6 border-b">
+    <section className="py-4 border-b border-[#dee2e6] border-t">
       <div className="container">
-        <div className="flex flex-wrap items-center justify-between gap-6">
-          <span className="font-semibold text-[15px] text-black whitespace-nowrap">
+        <div className="flex items-center justify-between gap-6">
+          <span className="hidden md:block font-semibold text-[15px] text-black whitespace-nowrap">
             Trusted by 3.3K clients worldwide —
           </span>
-          <div className="flex-1 flex items-center justify-evenly gap-8">
-            {clients.map((client, idx) => (
-              <img
-                key={client.name}
-                src={client.img}
-                alt={client.alt}
-                className="h-8 object-contain max-w-[140px]"
-                style={idx === 2 ? { filter: 'brightness(0) saturate(100%) invert(60%) sepia(80%) saturate(500%) hue-rotate(10deg)' } : {}}
-              />
-            ))}
+          <div className="flex-1 min-w-0">
+            <Slider {...settings} className="w-full">
+              {clients.map((client) => (
+                <div key={client.name} className="flex justify-center items-center h-12">
+                  <img
+                    src={client.img}
+                    alt={client.alt}
+                    className="object-contain w-full md:max-w-[140px] w-auto"
+                  />
+                </div>
+              ))}
+            </Slider>
           </div>
         </div>
       </div>
@@ -48,4 +90,4 @@ const ClientSection = () => {
   );
 };
 
-export default ClientSection; 
+export default ClientSection;

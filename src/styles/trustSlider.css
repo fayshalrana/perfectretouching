@@ -1,0 +1,79 @@
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: #1abc9c;
+}
+.slick-dots li button:before {
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+    opacity: .50;
+    color: #1abc9c;
+}
+.slick-dots {
+    bottom: -34px;
+}
+.slick-dots li {
+    margin: 0;
+}
+.slider-container {
+    position: relative;
+  }
+  .slick-next:before {
+   display: none;
+}
+  .slick-prev:before {
+   display: none;
+}
+  
+  .custom-prev-arrow,
+  .custom-next-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    z-index: 1;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #1abc9c58;
+    color: #1abc9c;
+  }
+  
+  .custom-prev-arrow {
+    left: -50px;
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .custom-prev-arrow:hover {
+    background-color: #1abc9c;
+    color: #fff;
+  }
+  
+  
+  .custom-next-arrow {
+    right: -50px;
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .custom-next-arrow:hover {
+    background-color: #1abc9c;
+    color: #fff;
+  }
+  
+  .slick-slider:hover .custom-prev-arrow {
+    left: -15px;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .slick-slider:hover .custom-next-arrow {
+    right: -15px;
+    opacity: 1;
+    visibility: visible;
+  }
+  

@@ -18,8 +18,8 @@ function Home() {
       <AboutSection />
       <DetailsSection />
       <CallToActionSection />
-      <TrustSection />
       <PricingSection />
+      <TrustSection />
       <ProcessSection />
       <PortalSection />
       <LatestPostSection />

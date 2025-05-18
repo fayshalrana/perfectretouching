@@ -5,14 +5,10 @@ import Footer from "../components/shared/Footer/Footer";
 const RootLayout = () => {
   return (
     <>
-      <header>
-        <Navbar />
-      </header>
-
+      <Navbar />
       <main>
         <Outlet />
       </main>
-
       <footer>
         <Footer />
       </footer>
