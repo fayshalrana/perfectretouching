@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="container px-4 lg:px-0">
         <div className="flex flex-col md:flex-row lg:grid-cols-12 gap-8 items-center">
           {/* Left Side */}
-          <div className="md:w-1/2 lg:col-span-5">
+          <div className="md:w-1/2 lg:flex-1 lg:col-span-5">
             <h1 style={{ fontFamily: 'Rubik', lineHeight: '1.5' }} className="md:text-[3.2rem] lg:text-[2.25rem] font-medium text-[#222] mb-7 mt-6 leading-tight">
               Scale up Your E-commerce<br />
 
@@ -83,7 +83,7 @@ const Hero = () => {
             </div>
           </div>
           {/* Right Side - Image Collage */}
-          <div className="md:w-1/2 lg:col-span-7 mt-8 md:mt-0">
+          <div className="md:w-1/2 lg:w-auto lg:col-span-7 mt-8 md:mt-0">
             <div className="image_card_wrapper flex flex-col lg:flex-row gap-4">
               <div className="image_card">   <img src={hero1}
                 alt='hero image 1'

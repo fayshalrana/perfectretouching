@@ -46,7 +46,7 @@ const DetailsSection = () => {
   const [activeTab, setActiveTab] = useState("jewelry");
 
   return (
-    <section className="py-[160px] bg-white">
+    <section className="py-10 lg:py-[160px] bg-white">
       <div className="container">
         {/* Title & Subtitle */}
         <div className="text-center mb-8">

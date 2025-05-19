@@ -63,7 +63,7 @@ const ClientSection = () => {
   };
 
   return (
-    <section className="py-4 border-b border-[#dee2e6] border-t">
+    <section className="py-4 border-b border-[#dee2e6] border-t overflow-hidden">
       <div className="container">
         <div className="flex items-center justify-between gap-6">
           <span className="hidden md:block lg:min-w-[380px] font-semibold text-[15px] text-black whitespace-nowrap">

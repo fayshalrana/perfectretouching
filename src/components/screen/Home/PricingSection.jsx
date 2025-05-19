@@ -93,7 +93,7 @@ const PricingSection = () => {
   const plan = plans[selected];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-10 lg:py-20 bg-white">
       <div className="container">
         {/* Top */}
         <div className="flex flex-col items-center mb-10">

@@ -71,7 +71,7 @@ const TrustSection = () => {
   };
 
   return (
-    <section className="bg-[#f7f8fa] py-16">
+    <section className="bg-[#f7f8fa] py-8 lg:py-16 overflow-hidden">
       <div className="container flex flex-col lg:flex-row gap-6 items-start">
         {/* Left */}
         <div className="flex-1 max-w-2xl mb-10 lg:mb-0 pr-[40px]">

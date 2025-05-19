@@ -23,7 +23,7 @@ const posts = [
 
 const LatestPostSection = () => {
   return (
-    <section className="py-[6rem] bg-white">
+    <section className="py-[3rem] lg:py-[6rem] bg-white">
       <div className="container flex flex-col md:flex-row gap-28 items-start">
         {/* Left */}
         <div className="w-full md:w-[330px] flex flex-col items-start justify-start mb-8 md:mb-0">
