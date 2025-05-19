@@ -105,7 +105,7 @@ const PricingSection = () => {
         {/* Pricing Table */}
         <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 items-stretch">
           {/* Plan Selector */}
-          <div className="w-full lg:col-span-3 flex flex-col lg:flex-row gap-2 mb-4 lg:mb-0 pr-0 lg:pr-4">
+          <div className="w-full lg:col-span-3 flex flex-col gap-2 mb-4 lg:mb-0 pr-0 lg:pr-4">
             {plans.map((p, i) => (
               <button
                 key={p.name}
