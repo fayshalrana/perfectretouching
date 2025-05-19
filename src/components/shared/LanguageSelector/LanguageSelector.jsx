@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import './LanguageSelector.css';
-
+import { TiArrowSortedDown } from "react-icons/ti";
 const languages = [
   { code: 'en', name: 'English', countryCode: 'us' },
   { code: 'ar', name: 'Arabic', countryCode: 'ae' },
@@ -26,57 +26,59 @@ const columns = [
 ];
 
 export default function LanguageSelector() {
-  const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState(languages[0]);
-  const ref = useRef();
-
-  useEffect(() => {
-    function handleClickOutside(e) {
-      if (ref.current && !ref.current.contains(e.target)) setOpen(false);
-    }
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+  const [open, setOpen] = useState(false);
 
   return (
-    <div className="lang-selector" ref={ref}>
-      <button className="lang-btn" onClick={() => setOpen(o => !o)}>
-        <img
-          className="lang-flag"
-          src={`https://flagcdn.com/24x18/${selected.countryCode}.png`}
-          alt={selected.name + ' flag'}
-          width="24"
-          height="18"
-        />
-        <span className="lang-name">{selected.name}</span>
-        <span className="lang-arrow">▼</span>
-      </button>
-      {open && (
-        <div className="lang-dropdown">
-          <div className="lang-columns">
-            {columns.map(([start, end], i) => (
-              <div className="lang-col" key={i}>
-                {languages.slice(start, end).map(lang => (
-                  <div
-                    className="lang-item"
-                    key={lang.code}
-                    onClick={() => { setSelected(lang); setOpen(false); }}
-                  >
-                    <img
-                      className="lang-flag"
-                      src={`https://flagcdn.com/24x18/${lang.countryCode}.png`}
-                      alt={lang.name + ' flag'}
-                      width="24"
-                      height="18"
-                    />
-                    <span className="lang-name">{lang.name}</span>
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
+    <div className="lang-selector h-full group">
+      <button 
+        className="lang-btn hover:bg-gray-100 h-full focus:outline-none focus:ring-0 focus:ring-offset-0 focus:shadow-none"
+        onMouseEnter={() => setOpen(true)}
+        onMouseLeave={() => setOpen(false)}
+      >
+        <div className="w-[20px] h-[20px] rounded-full overflow-hidden mr-[8px]">
+          <img
+            className="lang-flag w-full h-full object-cover flex items-center justify-center"
+            src={`https://flagcdn.com/24x18/${selected.countryCode}.png`}
+            alt={selected.name + ' flag'}
+            width="24"
+            height="24"
+          />
         </div>
-      )}
+        <span className="lang-name text-[14px] font-light text-black leading-[20px]">{selected.name}</span>
+        <span className="lang-arrow"><TiArrowSortedDown className="text-[16px]"/></span>
+      </button>
+      <div 
+        className={`lang-dropdown -left-[100%] md:left-0 ${open ? 'block' : 'hidden'}`}
+        onMouseEnter={() => setOpen(true)}
+        onMouseLeave={() => setOpen(false)}
+      >
+        <div className="lang-columns py-5">
+          {columns.map(([start, end], i) => (
+            <div className="lang-col" key={i}>
+              {languages.slice(start, end).map(lang => (
+                <div
+                  className="lang-item"
+                  key={lang.code}
+                  onClick={() => {
+                    setSelected(lang);
+                    setOpen(false);
+                  }}
+                >
+                  <img
+                    className="lang-flag"
+                    src={`https://flagcdn.com/24x18/${lang.countryCode}.png`}
+                    alt={lang.name + ' flag'}
+                    width="24"
+                    height="18"
+                  />
+                  <span className="lang-name">{lang.name}</span>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 } 

@@ -8,6 +8,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
+import { MdKeyboardArrowUp } from "react-icons/md";
 
 const Footer = () => {
   const [showScroll, setShowScroll] = useState(false);
@@ -46,36 +47,36 @@ const Footer = () => {
               <strong className="font-semibold border-b border-dashed border-[#E9ECEF]">Email:</strong> <a href="mailto:hello@perfectretouching.com" className="text-[#e0e0e0]">hello@perfectretouching.com</a>
             </div>
             <div className="flex gap-3 mt-2">
-              <div class="social-login-icons">
-                <div class="socialcontainer">
-                  <div class="social-icon-1">
+              <div className="social-login-icons">
+                <div className="socialcontainer">
+                  <div className="social-icon-1">
                     <FaXTwitter />
                   </div>
-                  <div class="social-icon-1">
+                  <div className="social-icon-1">
                     <FaXTwitter />
                   </div>
                 </div>
-                <div class="socialcontainer">
-                  <div class="social-icon-2">
+                <div className="socialcontainer">
+                  <div className="social-icon-2">
                     <FaInstagram />
                   </div>
-                  <div class="social-icon-2">
+                  <div className="social-icon-2">
                     <FaInstagram />
                   </div>
                 </div>
-                <div class="socialcontainer">
-                  <div class="social-icon-3">
+                <div className="socialcontainer">
+                  <div className="social-icon-3">
                     <FaFacebookF />
                   </div>
-                  <div class="social-icon-3">
+                  <div className="social-icon-3">
                     <FaFacebookF />
                   </div>
                 </div>
-                <div class="socialcontainer">
-                  <div class="social-icon-4">
+                <div className="socialcontainer">
+                  <div className="social-icon-4">
                     <FaLinkedinIn />
                   </div>
-                  <div class="social-icon-4">
+                  <div className="social-icon-4">
                     <FaLinkedinIn />
                   </div>
                 </div>
@@ -129,14 +130,11 @@ const Footer = () => {
         {/* Scroll to top button */}
         {showScroll && (
           <button
-            className="fixed bottom-8 right-8 z-50 bg-[#bbb] border-none rounded-full w-14 h-14 flex items-center justify-center text-white text-3xl cursor-pointer transition-opacity duration-300"
+            className="fixed bottom-8 right-8 z-50 bg-[#bbb]/70 hover:bg-[var(--primaryClr)] border-none rounded-full w-10 h-10 flex items-center justify-center text-white text-3xl cursor-pointer transition-all duration-300"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             aria-label="Scroll to top"
           >
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="12" fill="#bbb" />
-              <path d="M8 14l4-4 4 4" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
+           <MdKeyboardArrowUp className='text-2xl'/>
           </button>
         )}
       </div>

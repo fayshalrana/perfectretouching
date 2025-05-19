@@ -6,7 +6,7 @@
 .lang-btn {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   background: white;
   border: none;
   padding: 8px 16px 8px 10px;
@@ -18,7 +18,7 @@
 }
 .lang-flag {
   width: 24px;
-  height: 18px;
+  height: 24px;
   object-fit: cover;
   margin-right: 4px;
   border-radius: 2px;
@@ -32,9 +32,8 @@
 }
 .lang-dropdown {
   position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 260px;
+  top: 90%;
+  min-width: 400px;
   background: #fff;
   border-radius: 0 0 6px 6px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.13);
@@ -45,22 +44,37 @@
 .lang-columns {
   display: flex;
   flex-direction: row;
-  gap: 24px;
   padding: 0 16px;
 }
 .lang-col {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  flex-grow: 1;
+  
 }
 .lang-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 4px 0;
+  gap: 6px;
+  padding: 8px;
   cursor: pointer;
-  border-radius: 3px;
+  border-bottom: 1px solid rgb(214, 214, 214);
+  border-right: 1px solid rgb(214, 214, 214);
   transition: background 0.15s;
+}
+.lang-item span{
+  font-size: 12px;
+}
+.lang-col:nth-child(2) .lang-item{
+  border-right: none;
+}
+.lang-item:last-child{
+  border-bottom: none;
+}
+.lang-flag{
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
 }
 .lang-item:hover {
   background: #f3f6fa;

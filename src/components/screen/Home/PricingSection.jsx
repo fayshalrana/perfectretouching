@@ -105,7 +105,7 @@ const PricingSection = () => {
         {/* Pricing Table */}
         <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 items-stretch">
           {/* Plan Selector */}
-          <div className="w-full lg:col-span-3 flex flex-row lg:flex-col gap-2 mb-4 lg:mb-0 pr-0 lg:pr-4">
+          <div className="w-full lg:col-span-3 flex flex-col lg:flex-row gap-2 mb-4 lg:mb-0 pr-0 lg:pr-4">
             {plans.map((p, i) => (
               <button
                 key={p.name}
@@ -151,7 +151,7 @@ const PricingSection = () => {
                 <span className="text-[40px] md:text-[64px] font-noraml text-[#222] leading-[40px] md:leading-[64px]">{plan.price.toFixed(2)}</span>
               </div>
               <span className="text-[12px] md:text-[14px] font-bold text-[#ff3c3c] uppercase mb-6 tracking-wider">IMAGE</span>
-              <button className="mt-2 bg-[#1abc9c] hover:bg-[#159c82] text-white font-medium px-6 md:px-8 py-3 rounded-md text-base md:text-lg transition-all w-full">
+              <button className="mt-2 bg-[#1abc9c] text-white font-normal px-6 md:px-8 py-3 rounded-md text-base md:text-lg transition-all w-full hover:bg-[#1abc9c]/80 border-b-[4px] border-[#1a826e]">
                 Get Started
               </button>
             </div>

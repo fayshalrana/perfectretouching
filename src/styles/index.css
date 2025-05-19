@@ -16,17 +16,26 @@ body {
 }
 
 body {
-  font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 150%;
-  max-width: 1920px;
-  margin: 0 auto;
   font-family: 'Rubik', sans-serif;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 1.5rem;
 }
 
 @media (min-width: 1400px) {
   .container {
     max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 .75rem;
+  }
+}
+@media (max-width: 777.92px) {
+  .container {
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 .75rem;
   }

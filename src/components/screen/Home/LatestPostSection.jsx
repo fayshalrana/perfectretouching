@@ -1,18 +1,21 @@
 import React from "react";
+import post1 from '@assets/images/post1.webp'
+import post2 from '@assets/images/post2.webp'
+import post3 from '@assets/images/post3.webp'
 
 const posts = [
   {
-    image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=300&q=80",
+    image: post1,
     date: "April 25, 2025, 4:42 A.M.",
     title: "Master Photoshop Bracelet Jewelry Retouching with These Simple Steps in 2025"
   },
   {
-    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=300&q=80",
+    image: post2,
     date: "April 17, 2025, 10:24 A.M.",
     title: "Food Photo Retouching Services to Turn Your Photos Yummy"
   },
   {
-    image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=300&q=80",
+    image: post3,
     date: "April 5, 2025, 5:24 A.M.",
     title: "9 Diamond Ring Retouching Tips to Perfect Jewelry Photos"
   }
@@ -35,7 +38,7 @@ const LatestPostSection = () => {
           <div className="absolute top-0 left-0 h-full w-full dotted-bg pointer-events-none"></div>
           {posts.map((post, idx) => (
             <div key={idx} className="flex flex-col mb-10">
-              <div className="w-full h-[160px] rounded-md overflow-hidden mb-6 bg-gray-100">
+              <div className="w-full h-[160px] rounded-[4px] overflow-hidden mb-6 bg-gray-100">
                 <img src={post.image} alt="post" className="w-full h-full object-cover" />
               </div>
               <div className="text-[14px] leading-[21px] text-[#888] mb-4 hover:text-[var(--secondaryClr)]">{post.date}</div>

@@ -29,11 +29,11 @@ const Navbar = () => {
       {/* Top Bar */}
       <div className="border-b border-gray-100">
         <div className="container">
-          <div className="flex justify-between items-center text-[14px] text-[#444] gap-6">
-            <div className="flex items-center gap-1 mr-6">
+          <div className="flex justify-between items-center flex-col md:flex-row text-[14px] text-[#444] gap-2 md:gap-6">
+            <div className="flex items-center gap-1 h-[48px]">
               <LanguageSelector />
             </div>
-            <ul className="flex">
+            <ul className="flex w-full md:max-w-max justify-center border-t ">
               <li className="bg-transparent hover:bg-gray-100 p-3"><a href="#" className="text-[14px] text-[#444] hover:text-[#1abc9c] transition">Quotation</a></li>
               <li className="bg-transparent hover:bg-gray-100 p-3 border-l border-gray-100 border-r"><a href="#" className="text-[14px] text-[#444] hover:text-[#1abc9c] transition">FAQs</a></li>
               <li className="bg-transparent hover:bg-gray-100 p-3"><a href="#" className="text-[14px] text-[#444] hover:text-[#1abc9c] transition">Sign In</a></li>

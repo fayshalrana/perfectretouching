@@ -51,9 +51,7 @@ const ClientSection = () => {
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    // autoplaySpeed: 0,
-    // cssEase: "linear",
-    // pauseOnHover: false,
+    pauseOnHover: false,
     responsive: [
       {
         breakpoint: 768,
@@ -68,17 +66,17 @@ const ClientSection = () => {
     <section className="py-4 border-b border-[#dee2e6] border-t">
       <div className="container">
         <div className="flex items-center justify-between gap-6">
-          <span className="hidden md:block font-semibold text-[15px] text-black whitespace-nowrap">
+          <span className="hidden md:block lg:min-w-[380px] font-semibold text-[15px] text-black whitespace-nowrap">
             Trusted by 3.3K clients worldwide —
           </span>
           <div className="flex-1 min-w-0">
-            <Slider {...settings} className="w-full">
+            <Slider {...settings}>
               {clients.map((client) => (
-                <div key={client.name} className="flex justify-center items-center h-12">
+                <div key={client.name} className="flex justify-center items-center w-[109px] h-[36px]">
                   <img
                     src={client.img}
                     alt={client.alt}
-                    className="object-contain w-full md:max-w-[140px] w-auto"
+                    className="object-contain w-full h-full"
                   />
                 </div>
               ))}

@@ -42,19 +42,19 @@ const steps = [
 const ProcessSection = () => {
   return (
     <section className="py-[8rem] bg-white">
-      <div className="container flex justify-between gap-[7rem] items-start">
+      <div className="container flex justify-between gap-[30px] lg:gap-[7rem] flex-col lg:flex-row items-start">
         {/* Left */}
-        <div className="w-full lg:w-[660px] sticky top-[100px]">
+        <div className="w-full lg:w-[660px] md:sticky md:top-[100px]">
           <span className="inline-block border border-[#1abc9c] text-[12px] font-light tracking-normal text-[#1abc9c] px-2 rounded-full mb-4">Process</span>
           <h2 style={{ fontFamily: 'Playfair Display' }} className="text-[40px] font-bold text-[#222] mb-[30px] pt-6 leading-[48px]">Masterpieces in the Making –<br />Experience Effortless Perfection</h2>
           <p className="text-[#222] text-bace leading-[26px]">A work process that makes your work easy to do without facing any hassle.</p>
         </div>
         {/* Right: Sticky Steps */}
-        <div className="flex flex-col gap-8 w-full lg:w-[550px]">
+        <div className="flex flex-col gap-4 md:gap-8 w-full lg:w-[550px]">
           {steps.map((step, idx) => (
             <div
               key={step.number}
-              className={`relative sticky border ${step.border} ${step.bg} rounded-lg p-12 flex flex-col items-center text-center min-h-[280px]`}
+              className={`relative md:sticky border ${step.border} ${step.bg} rounded-lg p-12 flex flex-col items-center text-center min-h-[280px]`}
               style={{ top: `${100 + idx * 50}px` }} // 100, 300, 500, ...
             >
               <span className="absolute left-6 top-6 w-12 h-12 rounded-full bg-[#222] text-white flex items-center justify-center font-semibold text-sm">

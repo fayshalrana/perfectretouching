@@ -3,7 +3,8 @@ import crm from "@assets/images/portal.webp";
 import profile from "@assets/images/User-Profile-Oct.webp";
 import welcome from "@assets/images/Welcome-Back-Oct.webp";
 import { IoPaperPlaneOutline } from "react-icons/io5";
-
+import { FaCheck } from "react-icons/fa6";
+import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
 const features = [
   "Personalized Dashboard",
@@ -18,10 +19,10 @@ const features = [
 
 const PortalSection = () => {
   return (
-    <section className="py-16 bg-[#f7f8fa]">
-      <div className="container grid grid-cols-12 gap-10">
+    <section className="pt-[14rem] pb-[5rem] lg:py-16 bg-[#f7f8fa]">
+      <div className="container flex flex-col lg:grid lg:grid-cols-12 gap-5 lg:gap-10">
         {/* Left: CRM Image */}
-        <div className="col-span-7 relative">
+        <div className="lg:col-span-7 relative">
           <img
             src={crm}
             alt="CRM Dashboard"
@@ -35,7 +36,7 @@ const PortalSection = () => {
           </div>
         </div>
         {/* Right: Content */}
-        <div className="col-span-5 pb-[50px]">
+        <div className="lg:col-span-5 pb-[50px]">
           <span className="inline-block border border-[#1abc9c] text-[12px] font-light tracking-normal text-[#1abc9c] px-2 rounded-full mb-4">Portal</span>
           <h2 className="text-[34px] leading-[51px] font-semibold text-[#212529] mb-6">Simplified Order<br />Management, Elevated Retouching</h2>
           <p className="text-[#444] text-base leading-[26px] mb-6">
@@ -50,10 +51,12 @@ const PortalSection = () => {
             ))}
           </div>
           <div className="flex gap-4 mt-4">
-            <button className="bg-[#1abc9c] hover:bg-[#159c82] text-white font-medium px-6 py-2 rounded-md text-base transition-all">
+            <button className="bg-[#1abc9c] text-white font-normal px-6 py-2 rounded-md text-base transition-all hover:bg-[#1abc9c]/80 border-b-[4px] border-[#1a826e] flex items-center gap-2">
+            <FaCheck />
               Get a Quote
             </button>
-            <button className="bg-[#ff7a59] hover:bg-[#ff6a3c] text-white font-medium px-6 py-2 rounded-md text-base transition-all">
+            <button className="bg-[#ff7a59] hover:bg-[#ff7a59]/80 text-white font-normal px-6 py-2 rounded-md text-base transition-all border-b-[4px] border-[#e15532] flex items-center gap-2">
+            <MdOutlineKeyboardDoubleArrowRight className="text-2xl"/>
               Get Started
             </button>
           </div>

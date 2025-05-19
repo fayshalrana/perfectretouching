@@ -80,9 +80,9 @@ const DetailsSection = () => {
           </div>
           {/* Tab Content (placeholder, replace with your actual content logic) */}
           {activeTab === "jewelry" && (
-            <div className="grid grid-cols-12 items-center">
+            <div className="flex flex-col lg:grid lg:grid-cols-12 items-center">
               {/* Left: Jewelry Image */}
-              <div className="flex justify-center col-span-7 px-4">
+              <div className="flex justify-center lg:col-span-7 px-4">
                 <img
                   src={jewelry}
                   alt="Jewelry"
@@ -90,7 +90,7 @@ const DetailsSection = () => {
                 />
               </div>
               {/* Right: Details */}
-              <div className="col-span-5 px-4">
+              <div className="lg:col-span-5 px-4">
                 <h3 className="text-[26px] leading-[39px] text-[#212529] font-semibold pb-[30px]">Retouching Services</h3>
                 <p className="text-[#212529] text-base leading-[24px] font-normal mb-[30px]">
                   Transforming ordinary images and revealing the stunning, hidden beauty of jewelry, products, or models with our professional image retouching services is our passion. Through visual enhancements, we help captivate the audience and drive business growth. From removing spots, blemishes, and flaws to perfecting every detail, we eliminate distractions, through online photo retouching allowing viewers to focus on the true essence and beauty of models, jewelry, or products.
@@ -122,9 +122,9 @@ const DetailsSection = () => {
             </div>
           )}
           {activeTab === "editing" && (
-            <div className="grid grid-cols-12 items-start">
+            <div className="flex flex-col-reverse lg:grid lg:grid-cols-12 items-start">
               {/* Left: Details */}
-              <div className="col-span-5">
+              <div className="lg:col-span-5">
                 <h3 className="text-[26px] leading-[39px] text-[#212529] font-semibold mb-[30px]">Editing Services</h3>
                 <p className="text-[#212529] text-base leading-[24px] font-normal mb-[30px]">
                   Transform ordinary images into professional, attention-grabbing visuals that drive clicks and foot traffic. Our pro photo retouching images with proper detailing are post-ready for websites, social media, shops, and more. Uplift your brand with commercial photo editings like natural shadowing, background removal, color correction, and recoloring. It is the perfect photo editing company to step ahead in global competition.
@@ -154,7 +154,7 @@ const DetailsSection = () => {
                 </div>
               </div>
               {/* Right: Product Image */}
-              <div className="col-span-7 px-4 h-full pb-6">
+              <div className="lg:col-span-7 px-4 h-full pb-6">
                 <div className="border border-black rounded-xl p-6 w-full h-full flex justify-center items-center">
                   <img
                     src={editing}
@@ -166,9 +166,9 @@ const DetailsSection = () => {
             </div>
           )}
           {activeTab === "graphics" && (
-            <div className="grid grid-cols-12 items-center">
+            <div className="flex flex-col lg:grid lg:grid-cols-12 items-center">
               {/* Left: Illustration Image */}
-              <div className="flex justify-center col-span-7">
+              <div className="flex justify-center lg:col-span-7">
                 <img
                   src={graphic}
                   alt="Creative Graphics"
@@ -176,7 +176,7 @@ const DetailsSection = () => {
                 />
               </div>
               {/* Right: Details */}
-              <div className="col-span-5 px-4">
+              <div className="lg:col-span-5 px-4">
                 <h3 className="text-[26px] leading-[39px] text-[#212529] font-semibold mb-[30px]">Creative Graphics</h3>
                 <p className="text-[#212529] text-base leading-[24px] font-normal mb-[30px]">
                   Expose your unique ideas with high-end retouching and stunning designs that define your brand's identity and personality. Engage your target audience through photo retouching services and captivating logos, business cards, banners, color palettes, websites, and more. Powerful graphic designs and portrait photo editing speak volumes, making a lasting impact. Stand out and make your brand unforgettable with compelling visuals.
@@ -188,9 +188,9 @@ const DetailsSection = () => {
             </div>
           )}
           {activeTab === "video" && (
-            <div className="grid grid-cols-12 items-center">
+            <div className="flex flex-col-reverse lg:grid lg:grid-cols-12 items-center">
               {/* Left: Details */}
-              <div className="col-span-5">
+              <div className="lg:col-span-5">
                 <h3 className="text-[26px] leading-[39px] text-[#212529] font-semibold mb-[30px]">Video Editing</h3>
                 <p className="text-[#212529] text-base leading-[24px] font-normal mb-[30px]">
                   Bring your ideas and content to life with videos that allure and connect. From seamless cuts to noise-reduced audio, our experts craft every frame to mesmerize your audience. Whether for social media, corporate projects, or personal memories, let your stories flow effortlessly into the viewers' imagination. Show the world your unique perspective and shine!
@@ -200,7 +200,7 @@ const DetailsSection = () => {
                 </button>
               </div>
               {/* Right: Illustration Image */}
-              <div className="flex justify-center col-span-7">
+              <div className="flex justify-center lg:col-span-7">
                 <img
                   src={video}
                   alt="Video Editing"
