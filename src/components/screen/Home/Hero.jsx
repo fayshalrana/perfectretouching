@@ -15,8 +15,8 @@ const Hero = () => {
       <div className="container px-4 lg:px-0">
         <div className="flex flex-col md:flex-row lg:grid-cols-12 gap-8 items-center">
           {/* Left Side */}
-          <div className="md:w-1/2 lg:flex-1 lg:col-span-5">
-            <h1 style={{ fontFamily: 'Rubik', lineHeight: '1.5' }} className="md:text-[3.2rem] lg:text-[2.25rem] font-medium text-[#222] mb-7 mt-6 leading-tight">
+          <div className="w-full md:w-1/2 lg:flex-1 lg:col-span-5">
+            <h1 style={{ fontFamily: 'Rubik', lineHeight: '1.5' }} className="text-[2rem] md:text-[3.2rem] lg:text-[2.25rem] font-medium text-[#222] mb-7 mt-6 leading-tight">
               Scale up Your E-commerce<br />
 
               Sales with <span className="text-[#ff6a3c]"> <ReactTypingEffect
@@ -36,7 +36,7 @@ const Hero = () => {
               Stir up your online business to vertex level with apex quality and captivating visuals to make a boom.
             </div>
             {/* Email Input */}
-            <form className="flex flex-col sm:flex-row items-stretch sm:items-center p-2 mt-5 border border-gray-200 rounded-lg text-base outline-none bg-white w-full max-w-[418px]">
+            <form className="flex flex-row items-stretch sm:items-center p-2 mt-5 border border-gray-200 rounded-lg text-base outline-none bg-white w-full max-w-[418px]">
               <input
                 type="email"
                 placeholder="Enter your email address"
